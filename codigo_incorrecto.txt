@@ -1,0 +1,5 @@
+PNT("Greetings universe!")
+
+FO i = 10 TO 5 THEN
+	PRINT("HOLA")
+END

@@ -48,11 +48,18 @@ def limpiar_texto():
     txt_edit.delete(1.0, tk.END)
 
 def cargar_archivo_incorrecto():
-    print('incorrecto')
+    txt_edit.delete(1.0, tk.END)
+    filepath='./codigo_incorrecto.txt'
+    with open(filepath, "r") as input_file:
+        text = input_file.read()
+        txt_edit.insert(tk.END, text)
 
 def cargar_archivo_correcto():
-    print('correct')
-
+    txt_edit.delete(1.0, tk.END)
+    filepath='./codigo_correcto.txt'
+    with open(filepath, "r") as input_file:
+        text = input_file.read()
+        txt_edit.insert(tk.END, text)
 
 window = tk.Tk()
 window.title("Compilador")
